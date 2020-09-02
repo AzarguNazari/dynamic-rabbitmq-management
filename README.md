@@ -7,10 +7,10 @@ RabbitMQ has an option of configuring the RabbitMQ management through `definitio
 ## Properties of creating exchanges
 ```
 # creates exchange with name of exchang1 and other information
-manage.exchanges.position.name=exchange1
-manage.exchanges.position.type=fanout
-manage.exchanges.position.durable=false
-manage.exchanges.position.auto_delete=false
+manage.exchanges.exchange1.name=exchange1
+manage.exchanges.exchange1.type=fanout
+manage.exchanges.exchange1.durable=false
+manage.exchanges.exchange1.auto_delete=false
 ```
 
 ## Properties of creating queues
