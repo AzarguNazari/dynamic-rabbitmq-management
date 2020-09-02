@@ -2,15 +2,6 @@ version: "3.5"
 
 services:
 
-#  rabbit:
-#    container_name: rabbit
-#    build:
-#      context: ./config
-#    ports:
-#      - 15672:15672
-#    depends_on:
-#      - generator
-
   generator:
     container_name: "generator"
     build:

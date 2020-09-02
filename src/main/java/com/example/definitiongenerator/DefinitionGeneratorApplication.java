@@ -102,6 +102,7 @@ public class DefinitionGeneratorApplication implements ApplicationRunner {
         System.out.println(queues);
         System.out.println(users);
 
+        // Add two vhosts
         List<RabbitVhost> hosts = Arrays.asList(new RabbitVhost("/"), new RabbitVhost("example-host"));
 
 
