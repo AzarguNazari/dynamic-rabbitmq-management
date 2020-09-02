@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "circon")
+@ConfigurationProperties(prefix = "manage")
 @NoArgsConstructor
 public class ConnectionProperties {
 
