@@ -1,0 +1,38 @@
+version: "3.5"
+
+services:
+
+#  rabbit:
+#    container_name: rabbit
+#    build:
+#      context: ./config
+#    ports:
+#      - 15672:15672
+#    depends_on:
+#      - generator
+
+  generator:
+    container_name: "generator"
+    build:
+      context: .
+    ports:
+      - 15672:15672
+    environment:
+      SPRING_APPLICATION_JSON: '{
+          "circon.exchanges.positionUpdate.name": "position.update",
+          "circon.exchanges.positionUpdate.type": "fanout",
+          "circon.exchanges.positionUpdate.durable": "false",
+          "circon.exchanges.positionUpdate.auto_delete": "false",
+          "circon.queues.decurtis.name": "decurtis.queue",
+          "circon.queues.decurtis.durable": "false",
+          "circon.queues.decurtis.auto_delete": "false",
+          "circon.bindings.decurtisPosition.source": "position.update",
+          "circon.bindings.decurtisPosition.destination": "decurtis.queue",
+          "circon.bindings.decurtisPosition.destination_type": "queue",
+          "circon.users.decurtis.username": "decurtis",
+          "circon.users.decurtis.password": "password",
+          "circon.users.decurtis.permission": "^[decurtis.queue].*",
+        }'
+
+
+
