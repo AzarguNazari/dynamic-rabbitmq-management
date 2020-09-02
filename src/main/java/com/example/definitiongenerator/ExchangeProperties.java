@@ -9,7 +9,7 @@ import java.util.Map;
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "circon")
+@ConfigurationProperties(prefix = "manage")
 @NoArgsConstructor
 public class ExchangeProperties {
     private Map<String, RabbitExchange> exchanges;
@@ -17,7 +17,7 @@ public class ExchangeProperties {
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "circon")
+@ConfigurationProperties(prefix = "manage")
 @NoArgsConstructor
  class QueueProperties {
     private Map<String, RabbitQueue> queues;
@@ -25,7 +25,7 @@ public class ExchangeProperties {
 
 @Data
 @Component
-@ConfigurationProperties(prefix = "circon")
+@ConfigurationProperties(prefix = "manage")
 @NoArgsConstructor
  class BindingsProperties {
     private Map<String, RabbitBinding> bindings;
