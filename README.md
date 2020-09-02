@@ -1,0 +1,1 @@
+# dynamic-rabbitmq-management
